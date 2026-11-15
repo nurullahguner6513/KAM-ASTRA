@@ -8,19 +8,13 @@ __pycache__/
 .swift-home/
 
 config/api_keys.json
-memory/memory.json
 memory/phone_book.json
 
-# Sanal ortamlar ve günlükler
-.venv/
-.venv*/
 
 # Kişisel veriler (biyometri)
-memory/faces/
-memory/voices/
+memory/faces/*
+!memory/faces/NURULLAH_GUNER_1781005436.jpg
 
 
-# Mobil uygulama bağımlılıkları
-kam-mobile/node_modules/
 
 actions/ssd_mobilenet.tar.gz

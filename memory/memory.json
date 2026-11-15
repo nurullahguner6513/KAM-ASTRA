@@ -1,0 +1,38 @@
+{
+  "identity": {
+    "name": {
+      "value": "Nurullah Güner",
+      "updated_at": "2026-06-09 14:39"
+    },
+    "developer": {
+      "value": "Nurullah Güner",
+      "updated_at": "2026-06-09 05:40"
+    },
+    "designer": {
+      "value": "Nurullah Güner",
+      "updated_at": "2026-06-09 14:40"
+    },
+    "father_name": {
+      "value": "Zahir Güner",
+      "updated_at": "2026-06-09 17:24"
+    },
+    "father": {
+      "value": "Zahir Güner",
+      "updated_at": "2026-06-09 17:25"
+    },
+    "creator": {
+      "value": "Nurullah Güner",
+      "updated_at": "2026-06-13 01:50"
+    },
+    "sibling_name": {
+      "value": "Dil Ruba",
+      "updated_at": "2026-06-13 20:46"
+    }
+  },
+  "preferences": {
+    "address_user": {
+      "value": "address user as \"efendim\"",
+      "updated_at": "2026-06-09 17:09"
+    }
+  }
+}

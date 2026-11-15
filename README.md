@@ -14,7 +14,7 @@ Windows üzerinde çalışan KAM asistanı ve astronot sağlık takip modülü K
 
 ## Depoya eklenmeyenler
 
-API anahtarları, hafıza ve rehber dosyaları, yüz/ses biyometri kayıtları (kişisel veri) ile yeniden oluşturulabilen sanal ortamlar (`.venv`) ve `node_modules`.
+`config/api_keys.json` (API anahtarı), `memory/phone_book.json` ve diğer kişilere ait yüz kayıtları. Kurulum için `*.example.json` dosyalarını kullanın.
 
 ## Testler
 
