@@ -1,0 +1,15 @@
+{
+    "enabled": true,
+    "mode": "simulation",
+    "astronaut": "SIM Astronot",
+    "scenario": "normal",
+    "history_days": 60,
+    "check_interval_seconds": 60,
+    "notify_interval_seconds": 15,
+    "answer_voice": "gemini",
+    "voice_engine": "auto",
+    "voice": "",
+    "mute_non_critical": false,
+    "hologram": true,
+    "main_hologram": true
+}

@@ -1,0 +1,10 @@
+# KAM Windows - Gerekli paketler
+google-genai
+SpeechRecognition
+pyaudio; python_version < "3.14"
+PyAudioWPatch; python_version >= "3.14"
+opencv-python>=4.8.0
+psutil
+Pillow
+requests
+pyautogui

@@ -1,0 +1,36 @@
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/
+.claude/
+.swift-cache/
+.swift-home/
+
+config/api_keys.json
+memory/memory.json
+memory/phone_book.json
+
+# Sanal ortamlar ve günlükler
+.venv/
+.venv*/
+logs/
+Claude outputs/
+
+# Kişisel veriler (biyometri)
+memory/faces/
+memory/voices/
+
+# KAM ASTRA çalışma verisi ve yedekler
+modules/astra/data/
+modules/astra/backups/
+
+# Mobil uygulama bağımlılıkları
+kam-mobile/node_modules/
+kam-mobile/.expo/
+
+# Büyük model dosyaları (ayrıca indirilir)
+actions/ssd_mobilenet.tar.gz
+actions/ssd_mobilenet_v2_coco_2018_03_29/
+*.onnx
+*.zip
