@@ -7,7 +7,6 @@ __pycache__/
 .swift-cache/
 .swift-home/
 
-config/api_keys.json
 memory/phone_book.json
 
 
