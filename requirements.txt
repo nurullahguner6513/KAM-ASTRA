@@ -1,10 +1,28 @@
-# KAM Windows - Gerekli paketler
+# KAM + KAM ASTRA - Gerekli paketler (Windows, Python 3.10-3.12)
+
+# Yapay zeka ve ses
 google-genai
 SpeechRecognition
 pyaudio; python_version < "3.14"
 PyAudioWPatch; python_version >= "3.14"
+
+# Goruntu isleme ve nesne tanima
 opencv-python>=4.8.0
-psutil
+numpy
 Pillow
-requests
+
+# Sistem ve bilgisayar kontrolu
+psutil
 pyautogui
+pycaw
+screen-brightness-control
+winrt-Windows.UI.Notifications.Management
+
+# Ag, arama ve mobil baglanti
+requests
+websockets
+duckduckgo-search
+
+# Ses biyometrisi
+librosa
+scikit-learn

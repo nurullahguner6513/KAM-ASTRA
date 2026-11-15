@@ -6,6 +6,201 @@ Windows üzerinde çalışan, Türkçe konuşan kişisel yapay zekâ asistanı *
 
 ---
 
+## İçindekiler
+
+1. [Proje hakkında](#proje-hakkında)
+2. [Neden geliştirildi?](#neden-geliştirildi)
+3. [Nasıl çalışır?](#nasıl-çalışır)
+4. [Özellikler](#özellikler)
+5. [Güvenlik ve dürüstlük ilkeleri](#güvenlik-ve-dürüstlük-ilkeleri)
+6. [Mevcut durum ve yol haritası](#mevcut-durum-ve-yol-haritası)
+7. [Kurulum ve çalıştırma](#gereksinimler)
+
+---
+
+## Proje hakkında
+
+**KAM ASTRA**, uzun süreli uzay görevlerinde astronotun sağlık durumunu sürekli takip eden, verileri astronotun kendi geçmişiyle karşılaştıran, olağan dışı değişimleri erken fark edip astronotu **kendiliğinden sesli olarak uyaran** ve gerektiğinde **internetsiz** çalışabilen bir yapay zekâ destekli sağlık asistanıdır.
+
+Proje sıfırdan yazılmış ayrı bir uygulama değildir. Hâlihazırda çalışan kişisel yapay zekâ asistanı **KAM**'ın mimarisine bağımsız bir modül olarak entegre edilmiştir. Böylece KAM'ın sesli konuşma, görüntü işleme ve arayüz yetenekleri astronot sağlığı için kullanılır.
+
+> "Benim önceliğim, görev boyunca astronotun güvenliğine, sağlığına ve doğru bilgiye erişimine destek olmaktır."
+> — KAM ASTRA'nın temel ilkesi
+
+**Slogan:** *Your Health. Your Mission. Your AI Companion.*
+
+---
+
+## Neden geliştirildi?
+
+NASA'nın İnsan Araştırma Programı (Human Research Program), uzun süreli görevlerde insan sağlığını etkileyen beş temel tehlike tanımlar:
+
+| Tehlike | Astronota etkisi |
+|---|---|
+| **Uzay radyasyonu** | Dünya'nın koruyucu manyetik alanının dışında artan radyasyon dozu |
+| **İzolasyon ve kapalı yaşam** | Uyku, ruh hâli, stres ve bilişsel performans üzerinde etkiler |
+| **Dünya'dan uzaklık** | İletişim gecikir veya kesilir; tıbbi yardım hemen gelmez |
+| **Değişen yerçekimi** | Kas, kemik, sıvı dağılımı ve dolaşımda değişim |
+| **Kapalı ve zorlu ortam** | Hava kalitesi, sıcaklık, nem ve basınç sürekli izlenmeli |
+
+Bu tehlikelerin ortak sonucu şudur: **Mars gibi uzak bir görevde Dünya'daki sağlık ekibi her an müdahale edemez.** İletişim dakikalarca gecikebilir, hatta tamamen kesilebilir. Bu nedenle sağlık takibinin:
+
+- astronotun **yanında** ve **kesintisiz** olması,
+- herkese aynı "normal" değeri uygulamak yerine **kişiye özel** olması,
+- astronotun soru sormasını beklemeden **proaktif** uyarı vermesi,
+- **internet ve Dünya bağlantısı olmadan** da temel işlevlerini sürdürmesi
+
+gerekir. KAM ASTRA bu ihtiyaçlara yanıt aramak için geliştirildi. Amacı **teşhis koymak değil**, erken farkındalık sağlamak ve görev sağlık ekibine düzenli, güvenilir veri sunmaktır.
+
+---
+
+## Nasıl çalışır?
+
+```
+ASTRONOT
+   │
+   ▼
+BİYOMEDİKAL SENSÖRLER            (planlanan: vücuda / giysiye entegre)
+   │
+   ▼
+ELEKTRONİK VERİ TOPLAMA           (ölçüm → sayısallaştırma → zaman damgası → kalite kontrolü → aktarım)
+   │
+   ▼
+KAM ASTRA VERİ İŞLEME             (yerel SQLite veritabanı, kaynak / birim / kalite / durum etiketi)
+   │
+   ▼
+KURAL TABANLI RİSK MOTORU          (kişisel referans, trend, çoklu gösterge, 0–4 risk seviyesi)
+   │
+   ▼
+YAPAY ZEKÂ AÇIKLAMASI             (sonucu doğal Türkçe ile anlatır, seviyeyi değiştirmez)
+   │
+   ├──► SESLİ UYARI   (yerel Türkçe ses, internetsiz)
+   ├──► GÖRSEL BİLDİRİM (holografik sağlık penceresi, HUD sağlık kartı)
+   └──► SAĞLIK RAPORU (günlük / haftalık / aylık)
+```
+
+Bugün sensör donanımı yerine **simülasyon verisi** ve **elle ölçüm girişi** kullanılır; mimari gerçek cihaz bağlantısına hazırdır.
+
+---
+
+## Özellikler
+
+### KAM ASTRA – Sağlık modülü
+
+**Veri toplama ve kalite**
+- Takip edilen göstergeler: kalp atış hızı, dinlenik nabız, HRV, SpO2, kan basıncı, deri sıcaklığı, uyku (toplam / derin / REM / hafif), adım, hareketsizlik süresi, egzersiz, stres, ruh hâli, yorgunluk, radyasyon dozu.
+- Her ölçüm için **kaynak cihaz, ölçüm zamanı (UTC), birim, güvenilirlik puanı (0–1), veri kalitesi ve ölçüm durumu** kaydedilir.
+- Veri kaynakları ayrı etiketlenir: `SIMULATED`, `DEVICE`, `MANUAL`, `LAB`. **Simülasyon verisi gerçek veriyle asla karıştırılmaz.**
+- Fizyolojik olarak imkânsız veya bozuk değerler **reddedilir** ve ayrı bir tabloda saklanır; şüpheli ölçümler işaretlenir.
+- Tekrarlanan kayıtlar otomatik engellenir; eksik ve eski veri raporlarda açıkça belirtilir.
+
+**Kişisel analiz**
+- Her astronot için son **30 günden kişisel referans** (medyan ve yayılım) hesaplanır; referans için en az **7 günlük** veri gerekir.
+- Günlük analiz, **haftalık ve aylık karşılaştırma**, trend analizi.
+- Birden fazla göstergenin **birlikte** değerlendirilmesi (ör. nabız artışı + HRV düşüşü + uyku eksikliği).
+- Hafif bir değişim **3 gün** sürerse seviye yükselir.
+
+**Risk motoru (deterministik, test edilmiş, yapılandırılabilir)**
+
+| Seviye | Anlamı | KAM'ın davranışı |
+|---|---|---|
+| **0 – Normal** | Değerler kişisel aralıkta | — |
+| **1 – Bilgilendirme** | Hafif değişim | Bilgi verir |
+| **2 – Dikkat** | Süren veya çoklu değişim | Sesli uyarı, yeniden ölçüm önerisi |
+| **3 – Yüksek risk** | Tıbbi değerlendirme gerektirebilir | Uyarı + sağlık protokolü bildirimi |
+| **4 – Acil** | Tanımlı acil kriterler | Öncelikli alarm, açık talimat, acil rapor |
+
+- SpO2 için mutlak eşikler (ör. art arda ölçümlerde %90 ve %85 altı) ayrıca uygulanır.
+- **Radyasyon için ayrı protokol motoru:** günlük doz, görev boyunca biriken doz ve görev sınırına oranı.
+- Eşikler `modules/astra/risk_engine.py` ve `config/risk_rules.json` ile görev doktorlarınca ayarlanabilir. *Prototipteki eşikler örnek değerdir.*
+
+**Uyarı yönetimi**
+- Aynı uyarı sürekli tekrarlanmaz (seviyeye göre bekleme süresi).
+- Astronot uyarıyı **sesle onaylayabilir** ("uyarıyı aldım").
+- Onaylanmayan kritik uyarılar yeniden bildirilir: **Seviye 3 her 15 dakikada, Seviye 4 her 2 dakikada.**
+- Sessize alma yalnızca Seviye 1–2 için geçerlidir; **kritik alarmlar susturulamaz.**
+- Sesli ve görsel uyarı birlikte çalışır; veri bağlantısı kesilirse astronot bilgilendirilir.
+
+**Sesli asistan**
+- "Bugün sağlık durumum nasıl?", "Son 7 günü göster", "Radyasyon durumum nedir?", "Nabzım 72, kaydet" gibi doğal Türkçe sorular.
+- KAM yalnızca **veritabanında gerçekten bulunan** verilere dayanır; veri yoksa açıkça söyler.
+- Proaktif uyarılar **Windows'un yerel Türkçe sesiyle, internetsiz** okunur.
+
+**Görsel arayüz**
+- **Holografik sağlık penceresi:** dönen astronot hologramı, vücut bölgelerine göre renklenen durum noktaları ve analiz metni.
+- KAM ana ekranındaki **sağlık kartı:** dönen hologram ve güncel ASTRA özeti.
+- "Sağlık analizi yap" sesli komutuyla pencere açılır.
+
+**Simülasyon ve test**
+- 12 senaryo: normal, nabız artışı, HRV düşüşü, SpO2 düşüşü, uyku eksikliği, uzun hareketsizlik, yüksek stres, radyasyon artışı, sensör bağlantı kesilmesi, hatalı ölçüm, eksik veri, çoklu risk.
+- Canlı simülasyon akışı ve **113 otomatik test** (yanlış alarm, kaçırılmış alarm, eski veri, sensör arızası dahil).
+
+**Veri güvenliği**
+- Zaman damgaları UTC olarak saklanır, görev yerel saati ayrıca gösterilir.
+- Sağlık verisine erişim kayıtları (`access_log`) tutulur.
+- Bozuk veya geçersiz veri girişleri reddedilir.
+- Senkronizasyon durumu tutulur; çevrimdışıyken biriken veriler kaybolmaz.
+
+**Veritabanı tabloları:** `astronauts`, `mission_records`, `health_measurements`, `sleep_records`, `activity_records`, `radiation_records`, `device_connections`, `health_baselines`, `health_risk_events`, `health_alerts`, `health_reports`, `rejected_inputs`, `access_log`.
+
+### KAM – Kişisel asistan yetenekleri
+
+| Yetenek | Açıklama | İnternet |
+|---|---|---|
+| Doğal sesli sohbet | Gemini Live ile gerçek zamanlı Türkçe konuşma | Gerekir |
+| Motivasyon sohbeti | Yalnızlık, stres ve yorgunlukta destekleyici konuşma (profesyonel desteğin yerine geçmez) | Gerekir |
+| Canlı veri | Hava durumu, sistem bilgisi | Gerekir (hava) |
+| İnternette araştırma | Tarayıcıda arama, YouTube | Gerekir |
+| Görüntü / ekran analizi | Aktif pencereyi veya kamera görüntüsünü yorumlama | Gerekir |
+| **Nesne tanıma** | Kameradaki nesneleri tanıma (SSD MobileNet, OpenCV) | **Gerekmez** |
+| Yüz ve ses biyometrisi | Kullanıcıyı tanıma | Gerekmez |
+| Takvim, hatırlatıcı, not | Windows takvimi ve hatırlatıcılar | Gerekmez |
+| Bilgisayar kontrolü | Uygulama açma, pencere, dosya, pano, ekran görüntüsü | Gerekmez |
+| Mesajlaşma ve medya | WhatsApp, Spotify, YouTube | Gerekir |
+| Çeviri | Metin çevirisi | Gerekir |
+| Mobil uygulama | Telefondan KAM'a bağlanma | Yerel ağ |
+
+**Kişilik:** KAM ASTRA kendini astronotun görev asistanı olarak konumlandırır; sakin, kısa ve doğal konuşur, emir veren değil iş birliği yapan bir yol arkadaşıdır (`core/prompt.txt`).
+
+---
+
+## Güvenlik ve dürüstlük ilkeleri
+
+1. **Teşhis koymaz**, doktorun ve görev sağlık ekibinin yerini almaz.
+2. **Risk seviyesini yapay zekâ değil, kurallar belirler.** Dil modeli yalnızca doğrulanmış sonucu açıklar.
+3. **Veri uydurmaz.** Veri yoksa, eskiyse veya güvenilmezse bunu açıkça söyler.
+4. **Simülasyon verisi her zaman "SİMÜLASYON" olarak işaretlenir.**
+5. Ölçülemeyen bir şeyi ölçülebilir gibi göstermez: deri yüzey sıcaklığı vücut iç sıcaklığı değildir; SpO2 hareket ve soğuktan etkilenebilir.
+6. Radyasyon biyomedikal sensörlerle değil, **ayrı dozimetre** ile ölçülür.
+7. Görüntü işleme yalnızca **destekleyicidir**, biyomedikal ölçümün yerini almaz.
+8. Temel sağlık uyarıları **buluttan bağımsız** tasarlanmıştır.
+
+---
+
+## Mevcut durum ve yol haritası
+
+| Bileşen | Durum |
+|---|---|
+| Veri modeli, yerel veritabanı, kalite kontrolü | ✅ Mevcut (prototip) |
+| Kişisel referans, trend, risk motoru, radyasyon protokolü | ✅ Mevcut (prototip) |
+| Uyarı yönetimi, yerel Türkçe sesli uyarı | ✅ Mevcut (prototip) |
+| KAM sesli asistan entegrasyonu, holografik arayüz | ✅ Mevcut (prototip) |
+| 12 simülasyon senaryosu, 113 otomatik yazılım testi | ✅ Mevcut |
+| Elle ölçüm girişi | ✅ Mevcut |
+| Biyomedikal ve çevresel sensör altyapısı | 🔶 Planlanan |
+| Elektronik veri toplama donanımı | 🔶 Planlanan |
+| Gerçek dozimetre entegrasyonu | 🔶 Planlanan (yazılım arayüzü hazır) |
+| Tamamen yerel dil modeli (internetsiz soru–cevap) | 🔶 Planlanan |
+| Dünya ile veri eşitleme | 🔶 Planlanan |
+| Gerçek ölçümlerle prototip testleri, tıbbi eşik doğrulaması | 🔶 Planlanan |
+| Uzay yeterliliği (güvenilirlik, radyasyon dayanımı, EMC, görev uygunluğu) | 🔶 Planlanan |
+
+> Sistemin uçuş sertifikası yoktur. Testler simülasyon verisiyle yapılmış **yazılım testleridir**; klinik veya uçuş testi değildir.
+
+**Akıllı saat notu:** Denenen SK27 PLUS saati verilerini standart Bluetooth sağlık servisi veya Health Connect üzerinden paylaşmadığı için doğrudan bağlanamadı; bu nedenle elle ölçüm girişi eklendi. Mimari (`Health Data Connector → Device Adapter → Sensor Data Processor`) gerçek cihaz bağlantısına hazırdır.
+
+---
+
 ## Gereksinimler
 
 | Gereksinim | Not |
@@ -38,7 +233,6 @@ python -m venv venv
 .\venv\Scripts\activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt
-pip install websockets librosa scikit-learn pycaw screen-brightness-control duckduckgo-search winrt-Windows.UI.Notifications.Management
 ```
 
 > PowerShell "betik çalıştırma devre dışı" hatası verirse bir kez şunu çalıştırın:
