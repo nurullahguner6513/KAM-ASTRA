@@ -1,0 +1,13 @@
+KAM ASTRA - ASAMA 5b YEDEK VE GERI ALMA
+
+ui.py ve prompt.txt: ana ekrana donen ASTRA hologrami eklenmeden ONCEKI hallari.
+
+Geri almak icin (KAM kapaliyken, KAM klasorunde PowerShell):
+  Copy-Item modules\astra\backups\asama5b\ui.py ui.py
+  Copy-Item modules\astra\backups\asama5b\prompt.txt core\prompt.txt
+
+Yalnizca ana ekran hologramini kapatmak icin: astra_settings.json -> "main_hologram": false
+
+ui.py degisikligi (2 nokta, 8 satir):
+  1. KamUI.__init__: self.extra_drawers = []
+  2. _draw: extra_drawers listesindeki cizim fonksiyonlari cagrilir (hata olursa atlanir)

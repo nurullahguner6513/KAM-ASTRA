@@ -1,0 +1,2 @@
+KAM ASTRA kişilik talimatı geri alma:
+core/prompt.txt dosyasını bu klasördeki prompt.txt ile değiştirin.

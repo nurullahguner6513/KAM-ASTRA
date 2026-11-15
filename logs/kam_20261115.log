@@ -1,0 +1,98 @@
+2026-11-15 06:06:07 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): Kalp atış hızı geçerli aralığın dışında: 999 (beklenen 25–250)
+2026-11-15 06:06:08 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): Kalp atış hızı geçerli aralığın dışında: 0 (beklenen 25–250)
+2026-11-15 06:06:08 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): Kalp atış hızı geçerli aralığın dışında: 400 (beklenen 25–250)
+2026-11-15 06:06:08 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): Kalp atış hızı sayısal değil: nan
+2026-11-15 06:06:08 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): heart_rate için birim 'bpm' olmalı, gelen 'ms'
+2026-11-15 06:06:08 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): bilinmeyen ölçüm türü: 'immune_status'
+2026-11-15 06:06:08 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): zaman damgası saat dilimi bilgisi içermiyor
+2026-11-15 06:06:08 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): ölçüm zamanı gelecekte: 2026-11-16T06:06:08Z
+2026-11-15 06:06:08 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): bilinmeyen kaynak türü: 'WATCH'
+2026-11-15 06:06:08 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): kaynak cihaz belirtilmemiş
+2026-11-15 06:06:08 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): veri kalitesi geçerli aralığın dışında: 1.5 (beklenen 0.0–1.0)
+2026-11-15 06:06:08 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): bilinmeyen ölçüm durumu: 'great'
+2026-11-15 06:06:08 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): veritabanı kısıtı: FOREIGN KEY constraint failed
+2026-11-15 06:06:08 [WARNING] ASTRA: Geçersiz veri reddedildi (SleepRecord): geçersiz uyku aralığı: -60 dk
+2026-11-15 06:06:08 [WARNING] ASTRA: Geçersiz veri reddedildi (SleepRecord): uyku evrelerinin toplamı uyku aralığından uzun
+2026-11-15 06:06:08 [WARNING] ASTRA: Geçersiz veri reddedildi (RadiationRecord): doz hızı geçerli aralığın dışında: -1 (beklenen 0–1000000)
+2026-11-15 06:06:11 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): Kalp atış hızı geçerli aralığın dışında: 0 (beklenen 25–250)
+2026-11-15 06:06:11 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): Kalp atış hızı geçerli aralığın dışında: 400 (beklenen 25–250)
+2026-11-15 06:06:11 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): Oksijen doygunluğu geçerli aralığın dışında: 140 (beklenen 50–100)
+2026-11-15 06:16:36 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): Kalp atış hızı geçerli aralığın dışında: 999 (beklenen 25–250)
+2026-11-15 06:16:36 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): Kalp atış hızı geçerli aralığın dışında: 0 (beklenen 25–250)
+2026-11-15 06:16:36 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): Kalp atış hızı geçerli aralığın dışında: 400 (beklenen 25–250)
+2026-11-15 06:16:37 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): Kalp atış hızı sayısal değil: nan
+2026-11-15 06:16:37 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): heart_rate için birim 'bpm' olmalı, gelen 'ms'
+2026-11-15 06:16:37 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): bilinmeyen ölçüm türü: 'immune_status'
+2026-11-15 06:16:37 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): zaman damgası saat dilimi bilgisi içermiyor
+2026-11-15 06:16:37 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): ölçüm zamanı gelecekte: 2026-11-16T06:16:36Z
+2026-11-15 06:16:37 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): bilinmeyen kaynak türü: 'WATCH'
+2026-11-15 06:16:37 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): kaynak cihaz belirtilmemiş
+2026-11-15 06:16:37 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): veri kalitesi geçerli aralığın dışında: 1.5 (beklenen 0.0–1.0)
+2026-11-15 06:16:37 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): bilinmeyen ölçüm durumu: 'great'
+2026-11-15 06:16:37 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): veritabanı kısıtı: FOREIGN KEY constraint failed
+2026-11-15 06:16:37 [WARNING] ASTRA: Geçersiz veri reddedildi (SleepRecord): geçersiz uyku aralığı: -60 dk
+2026-11-15 06:16:37 [WARNING] ASTRA: Geçersiz veri reddedildi (SleepRecord): uyku evrelerinin toplamı uyku aralığından uzun
+2026-11-15 06:16:37 [WARNING] ASTRA: Geçersiz veri reddedildi (RadiationRecord): doz hızı geçerli aralığın dışında: -1 (beklenen 0–1000000)
+2026-11-15 06:16:39 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): Kalp atış hızı geçerli aralığın dışında: 0 (beklenen 25–250)
+2026-11-15 06:16:39 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): Kalp atış hızı geçerli aralığın dışında: 400 (beklenen 25–250)
+2026-11-15 06:16:39 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): Oksijen doygunluğu geçerli aralığın dışında: 140 (beklenen 50–100)
+2026-11-15 06:16:40 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2025-03-31 seviye=3 simülasyon=True
+2026-11-15 06:16:40 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2025-03-31 seviye=3 simülasyon=True
+2026-11-15 06:16:41 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2025-03-31 seviye=0 simülasyon=True
+2026-11-15 06:16:49 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): Kalp atış hızı geçerli aralığın dışında: 0 (beklenen 25–250)
+2026-11-15 06:16:49 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): Kalp atış hızı geçerli aralığın dışında: 400 (beklenen 25–250)
+2026-11-15 06:16:49 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): Oksijen doygunluğu geçerli aralığın dışında: 140 (beklenen 50–100)
+2026-11-15 06:17:04 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): Kalp atış hızı geçerli aralığın dışında: 0 (beklenen 25–250)
+2026-11-15 06:17:04 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): Kalp atış hızı geçerli aralığın dışında: 400 (beklenen 25–250)
+2026-11-15 06:17:04 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): Oksijen doygunluğu geçerli aralığın dışında: 140 (beklenen 50–100)
+2026-11-15 06:17:09 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): Kalp atış hızı geçerli aralığın dışında: 0 (beklenen 25–250)
+2026-11-15 06:17:09 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): Kalp atış hızı geçerli aralığın dışında: 400 (beklenen 25–250)
+2026-11-15 06:17:09 [WARNING] ASTRA: Geçersiz veri reddedildi (Measurement): Oksijen doygunluğu geçerli aralığın dışında: 140 (beklenen 50–100)
+2026-11-15 10:23:02 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 10:24:02 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 10:25:02 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 10:26:02 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 10:27:03 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 10:40:34 [INFO] ASTRA: ASTRA ses seçimi: motor=onecore ses=Microsoft Tolga
+2026-11-15 10:40:35 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 10:41:35 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 11:02:40 [INFO] ASTRA: ASTRA ses seçimi: motor=onecore ses=Microsoft Tolga
+2026-11-15 11:02:41 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 11:03:41 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 11:04:41 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 11:05:56 [INFO] ASTRA: ASTRA ses seçimi: motor=onecore ses=Microsoft Tolga
+2026-11-15 11:05:56 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 11:06:56 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 11:15:18 [INFO] ASTRA: ASTRA ses seçimi: motor=onecore ses=Microsoft Tolga
+2026-11-15 11:15:18 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 11:23:56 [INFO] ASTRA: ASTRA ses seçimi: motor=onecore ses=Microsoft Tolga
+2026-11-15 11:23:56 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 11:36:32 [INFO] ASTRA: ASTRA ses seçimi: motor=onecore ses=Microsoft Tolga
+2026-11-15 11:36:32 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 11:37:33 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 11:38:33 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 11:47:45 [INFO] ASTRA: ASTRA ses seçimi: motor=onecore ses=Microsoft Tolga
+2026-11-15 11:47:45 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 11:48:45 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 11:49:45 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 11:50:45 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 12:16:49 [INFO] ASTRA: ASTRA ses seçimi: motor=onecore ses=Microsoft Tolga
+2026-11-15 12:16:49 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 12:17:50 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 12:18:50 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 12:37:04 [INFO] ASTRA: ASTRA ses seçimi: motor=onecore ses=Microsoft Tolga
+2026-11-15 12:37:04 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 12:38:05 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 12:42:19 [INFO] ASTRA: ASTRA ses seçimi: motor=onecore ses=Microsoft Tolga
+2026-11-15 12:42:19 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 12:43:19 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 13:03:10 [INFO] ASTRA: ASTRA ses seçimi: motor=onecore ses=Microsoft Tolga
+2026-11-15 13:03:10 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 13:04:10 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 13:04:39 [INFO] ASTRA: ASTRA ses seçimi: motor=onecore ses=Microsoft Tolga
+2026-11-15 13:04:39 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 13:08:54 [INFO] ASTRA: ASTRA ses seçimi: motor=onecore ses=Microsoft Tolga
+2026-11-15 13:08:54 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 13:09:54 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True
+2026-11-15 13:49:31 [INFO] ASTRA: ASTRA ses seçimi: motor=onecore ses=Microsoft Tolga
+2026-11-15 13:49:31 [INFO] ASTRA: ASTRA değerlendirme: astronot=1 gün=2026-11-15 seviye=0 simülasyon=True

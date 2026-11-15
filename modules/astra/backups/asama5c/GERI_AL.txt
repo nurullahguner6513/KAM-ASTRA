@@ -1,0 +1,13 @@
+KAM ASTRA - ASAMA 5c YEDEK VE GERI ALMA
+
+Bu klasordeki ui.py: SAGLIK OZETI kartini ASTRA cizmeden ONCEKI hal (alttaki hologram eklenmis surum).
+ASTRA oncesi tamamen orijinal ui.py: modules\astra\backups\asama5b\ui.py
+
+Orijinale donmek icin (KAM kapaliyken, KAM klasorunde PowerShell):
+  Copy-Item modules\astra\backups\asama5b\ui.py ui.py
+
+Yalnizca ASTRA saglık kartini kapatmak icin: astra_settings.json -> "main_hologram": false
+(kart o zaman KAM in eski dönen vucut hologramiyla cizilir)
+
+ui.py degisikligi (orijinale gore): KamUI.__init__ icinde self.health_card_drawer = None;
+_draw_left_panel saglik kartinda: health_card_drawer varsa ASTRA cizer, yoksa eski kod calisir.

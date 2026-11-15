@@ -1,0 +1,63 @@
+1
+00:00:06,200 --> 00:00:09,500
+Kullanıcı: Merhaba.
+
+2
+00:00:09,900 --> 00:00:11,772
+KAM ASTRA: Merhaba efendim. Güne hazır mısın?
+
+3
+00:00:11,772 --> 00:00:13,700
+KAM ASTRA: Bugün nasıl bir görevle başlayalım?
+
+4
+00:00:14,200 --> 00:00:18,000
+Kullanıcı: Sağlık özeti yapar mısın?
+
+5
+00:00:20,300 --> 00:00:21,414
+KAM ASTRA: Simülasyon verisi.
+
+6
+00:00:21,414 --> 00:00:24,631
+KAM ASTRA: Bugünkü sağlık değerlendirmen seviye 0, yani normal.
+
+7
+00:00:24,631 --> 00:00:28,344
+KAM ASTRA: Tüm değerlendirilen göstergeler kişisel referans aralığında.
+
+8
+00:00:28,344 --> 00:00:31,500
+KAM ASTRA: Unutma, bu değerlendirme tıbbi bir teşhis değildir.
+
+9
+00:00:32,300 --> 00:00:35,400
+Kullanıcı: Ne için geliştirildin?
+
+10
+00:00:35,800 --> 00:00:36,696
+KAM ASTRA: Ben KAM ASTRA.
+
+11
+00:00:36,696 --> 00:00:41,816
+KAM ASTRA: Uzay görevlerinde sana eşlik etmek, sağlık durumunu ASTRA modülüyle takip etmek,
+
+12
+00:00:41,816 --> 00:00:47,576
+KAM ASTRA: görev süreçlerinde destek olmak ve güvenilir bir iletişim ortağı olmak için geliştirildim.
+
+13
+00:00:47,576 --> 00:00:53,400
+KAM ASTRA: Önceliğim, görev boyunca güvenliğine, sağlığına ve doğru bilgiye erişimine destek olmaktır.
+
+14
+00:00:54,000 --> 00:00:57,300
+Kullanıcı: Tamam, teşekkür ederim.
+
+15
+00:00:57,600 --> 00:00:58,647
+KAM ASTRA: Rica ederim efendim.
+
+16
+00:00:58,647 --> 00:01:02,100
+KAM ASTRA: Herhangi bir konuda daha fazla yardıma ihtiyacın olursa buradayım.

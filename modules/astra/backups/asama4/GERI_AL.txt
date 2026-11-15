@@ -1,0 +1,25 @@
+KAM ASTRA - ASAMA 4 YEDEK VE GERI ALMA
+======================================
+
+Bu klasordeki main.py ve prompt.txt, ASAMA 4 degisikliginden ONCEKI orijinal dosyalardir.
+  main.py     SHA-256 96d5aecb6e65e486cd940f946a56c05e0084ae20ce060de3cfe2aaa17c8342a4
+  prompt.txt  SHA-256 1633c58e7aa56c4fed6088921f8d5813cec9fae956b70fdc4eb752d95f60d472
+
+ASAMA 4 sonrasi dosyalar:
+  main.py          SHA-256 6bd920a5fd2f23593029d216005f987dd1b89a6d9d229e80802e0268b8d720d4
+  core/prompt.txt  SHA-256 ea5c5f504ca8a4aee6f836aa7df9e35826fe508e449bc69dbc34e3ef4d4741a1
+
+TAMAMEN GERI ALMAK ICIN (KAM kapaliyken, KAM klasorunde PowerShell):
+  Copy-Item modules\astra\backups\asama4\main.py main.py
+  Copy-Item modules\astra\backups\asama4\prompt.txt core\prompt.txt
+  (modules klasoru KAM'i etkilemez; isterseniz silebilirsiniz.)
+
+YALNIZCA ASTRA'YI KAPATMAK ICIN (dosyalari geri almadan):
+  modules\astra\config\astra_settings.json icinde "enabled": false yapin.
+
+main.py'deki degisiklikler (23 satir eklendi, 1 satir degisti; hepsi "ASTRA" yorumuyla isaretli):
+  1. TOOL_DECLARATIONS listesinden sonra: ASTRA ice aktarma blogu. ASTRA yuklenemezse KAM eskisi gibi calisir.
+  2. KAMLive.__init__: self.astra = start_astra(ui, self)
+  3. _on_text_command: "astra ..." ile baslayan yazili komutlar yerel olarak yanitlanir.
+  4. _execute_tool: astra_ ile baslayan araclar ASTRA'ya yonlendirilir.
+  5. _listen_audio: ASTRA konusurken mikrofon sesi Gemini'ye gonderilmez.

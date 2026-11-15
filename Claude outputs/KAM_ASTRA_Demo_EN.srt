@@ -1,0 +1,63 @@
+1
+00:00:06,200 --> 00:00:09,500
+User: Hello.
+
+2
+00:00:09,900 --> 00:00:11,772
+KAM ASTRA: Hello. Ready for the day?
+
+3
+00:00:11,772 --> 00:00:13,700
+KAM ASTRA: What task shall we start with today?
+
+4
+00:00:14,200 --> 00:00:18,000
+User: Can you give me a health summary?
+
+5
+00:00:20,300 --> 00:00:21,414
+KAM ASTRA: Simulated data.
+
+6
+00:00:21,414 --> 00:00:24,631
+KAM ASTRA: Your health assessment today is level 0, which means normal.
+
+7
+00:00:24,631 --> 00:00:28,344
+KAM ASTRA: All assessed indicators are within your personal reference range.
+
+8
+00:00:28,344 --> 00:00:31,500
+KAM ASTRA: Remember, this assessment is not a medical diagnosis.
+
+9
+00:00:32,300 --> 00:00:35,400
+User: What were you developed for?
+
+10
+00:00:35,800 --> 00:00:36,696
+KAM ASTRA: I'm KAM ASTRA.
+
+11
+00:00:36,696 --> 00:00:41,816
+KAM ASTRA: I was developed to accompany you on space missions, to monitor your health with the ASTRA module,
+
+12
+00:00:41,816 --> 00:00:47,576
+KAM ASTRA: to support you during mission tasks and to be a reliable communication partner.
+
+13
+00:00:47,576 --> 00:00:53,400
+KAM ASTRA: My priority is to support your safety, your health and your access to accurate information throughout the mission.
+
+14
+00:00:54,000 --> 00:00:57,300
+User: Okay, thank you.
+
+15
+00:00:57,600 --> 00:00:58,647
+KAM ASTRA: You're welcome.
+
+16
+00:00:58,647 --> 00:01:02,100
+KAM ASTRA: If you need more help with anything, I'm here.
